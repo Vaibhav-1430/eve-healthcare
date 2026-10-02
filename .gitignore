@@ -26,19 +26,35 @@ venv/
 ENV/
 env/
 
-# Environment variables
+# Environment variables & secrets (keep .env.example)
 .env
-.env.local
+.env.*
+!.env.example
 
-# IDEs
+# Node / Frontend
+node_modules/
+**/node_modules/
+frontend/dist/
+frontend/build/
+.next/
+*.tsbuildinfo
+
+# IDEs & Editors
 .idea/
 .vscode/
 *.swp
 *.swo
 
+# OS Generated
+.DS_Store
+Thumbs.db
+
 # Testing & Coverage
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
+coverage/
 htmlcov/
 coverage.xml
 
